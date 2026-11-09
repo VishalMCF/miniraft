@@ -1,0 +1,66 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+
+# Compiled output and tool caches
+dist/
+build/
+*.tsbuildinfo
+.cache/
+.vite/
+.vitest/
+.eslintcache
+.prettiercache
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+
+# Local environment and secrets (keep shareable templates)
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.sample
+!.env.template
+!.env.*.template
+
+# Logs and Node.js runtime diagnostics
+logs/
+*.log
+pids/
+*.pid
+*.pid.lock
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# Local editor settings (keep useful shared VS Code configuration)
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Operating-system metadata
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Desktop.ini
+
+# Keep package-manager lockfiles committed for reproducible installs.

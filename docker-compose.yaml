@@ -1,0 +1,43 @@
+services:
+  node-a:
+    build: ./raft-node
+    environment:
+      NODE_ID: A
+      PORT: 3001
+      PROXY_URL: http://fault-proxy:4000
+    ports:
+      - "3001:3001"
+    depends_on:
+      - fault-proxy
+
+  node-b:
+    build: ./raft-node
+    environment:
+      NODE_ID: B
+      PORT: 3002
+      PROXY_URL: http://fault-proxy:4000
+    ports:
+      - "3002:3002"
+    depends_on:
+      - fault-proxy
+
+  node-c:
+    build: ./raft-node
+    environment:
+      NODE_ID: C
+      PORT: 3003
+      PROXY_URL: http://fault-proxy:4000
+    ports:
+      - "3003:3003"
+    depends_on:
+      - fault-proxy
+
+  fault-proxy:
+    build: ./fault-proxy
+    environment:
+      PORT: 4000
+      NODE_A_URL: http://node-a:3001
+      NODE_B_URL: http://node-b:3002
+      NODE_C_URL: http://node-c:3003
+    ports:
+      - "4000:4000"
