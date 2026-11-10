@@ -4,7 +4,7 @@ import raftConfig from './config/raft.config.js';
 import { HealthModule } from './health/health.module.js';
 import { RaftModule } from './raft/raft.module.js';
 import { TransportModule } from './transport/transport.module.js';
-import {StateMachineModule} from "./state-machine/state-machine.module.js";
+import { StateMachineModule } from './state-machine/state-machine.module.js';
 
 @Module({
   imports: [
@@ -15,7 +15,7 @@ import {StateMachineModule} from "./state-machine/state-machine.module.js";
     HealthModule,
     RaftModule,
     TransportModule,
-    StateMachineModule
+    StateMachineModule,
   ],
 })
 export class AppModule {}
